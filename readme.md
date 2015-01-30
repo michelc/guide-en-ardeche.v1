@@ -7,9 +7,9 @@ Sources pour le site internet de [Nicole](http://guide-en-ardeche.com/).
 
 * <del>Ajouter un readme avec TODO</del>
 * <del>Ajouter la clé pour le référencement dans Bing</del>
-* Mettre un lien mailto sur l'email (avec javascript pour limiter le spam ?)
+* <del>Mettre un lien mailto sur l'email (avec javascript pour limiter le spam ?)</del>
 * <del>Mentionner les sources des photos dans le readme</del>
-* Remplacer strata (http://html5up.net/) par hyde (http://hyde.getpoole.com/) ?
+* Remplacer strata (http://html5up.net/) par hyde (http://hyde.getpoole.com/) : en cours.
 
 ## Photos
 
@@ -17,3 +17,4 @@ Sources pour le site internet de [Nicole](http://guide-en-ardeche.com/).
 * Gorges de l'Ardèche : https://www.flickr.com/photos/joe_leads/13043293793
 * Grotte Chauvet : https://fr-fr.facebook.com/InventeursGrotteChauvet
 * Gerbier de Jonc : https://www.flickr.com/photos/cpakmoi/8664182413
+* Antraïgues : https://www.flickr.com/photos/fz/5943716826
