@@ -30,7 +30,7 @@ html {
   font-size: 16px;
   line-height: 1.75;
 }
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   html {
     font-size: 20px;
   }
@@ -97,19 +97,26 @@ ul {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 0.75rem;
+  padding: 2rem .75rem;
   color: white;
   background-color: #202020;
   background-image: url("images/bg.jpg");
   background-position: bottom;
   background-size: auto 100%;
-  xbackground-size: cover;
 }
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .sidebar {
     background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20rem;
+    padding: 2rem 1.5rem 2rem 1rem;
+    text-align: right;
   }
 }
+
 /* Sidebar effects */
 .sidebar a {
   color: white;
@@ -153,10 +160,17 @@ ul {
 
 .content {
   max-width: 38rem;
-  padding-left:  1rem;
+  padding-left: 1rem;
   padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
+}
+@media (min-width: 64rem) {
+  .content, .copyright {
+    max-width: 38rem;
+    margin-left: 23rem;
+    margin-right: 2rem;
+  }
 }
 
 
@@ -167,7 +181,7 @@ ul {
  */
 
 section {
-  margin: 2em 0;
+  margin: 2rem 0;
 }
 
 section b {
@@ -196,14 +210,14 @@ section b {
  * Custom type
  */
 
-@media (max-width: 35em) {
+@media (max-width: 35rem) {
   h2 br { display: none; }
 }
 
 .button {
   color: white;
   background-color: blue;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 }
 
 #contacts .column {
