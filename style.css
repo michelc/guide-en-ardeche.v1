@@ -141,6 +141,17 @@ ul {
   margin-bottom: 1.5rem;
   padding-right: 1rem;
 }
+@media (min-width: 48em) {
+  .column {
+    float: left;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 1.5rem;
+    width: 14.285%;
+  }
+  .column.half { width: 50%; }
+  .column.half p { font-size: 0.85rem; }
+}
 
 /* Clearfix by Nicolas Gallagher */
 .clearfix:before, .row:before,
