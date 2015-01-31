@@ -106,7 +106,8 @@ ul {
 }
 @media (min-width: 64rem) {
   .sidebar {
-    background-size: cover;
+    background-image: url("images/antraigues.jpg");
+    background-size: 100% auto;
     position: fixed;
     top: 0;
     left: 0;
