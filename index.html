@@ -66,35 +66,35 @@
 
         <h2>Cartes postales d'Ardèche</h2>
 
-        <p>
+        <p class="aide">
           Cliquez sur une image pour l'afficher en grand puis re-cliquez dessus pour la faire
           disparaitre.
         </p>
 
         <div class="row">
           <div class="column half">
-            <a href="images/fulls/vallon-pont-arc.jpg"><img src="images/thumbs/vallon-pont-arc.jpg" alt="" /></a>
+            <img src="images/thumbs/vallon-pont-arc.jpg" alt="" class="popx" />
             <h3>Vallon Pont d'Arc</h3>
             <p>Arche naturelle de 54 mètres de haut.
               (<a href="https://www.flickr.com/photos/jakob65/14311720556">Michael, mai 2014</a>)
             </p>
           </div>
           <div class="column half">
-            <a href="images/fulls/gorges-ardeche.jpg"><img src="images/thumbs/gorges-ardeche.jpg" alt="" /></a>
+            <img src="images/thumbs/gorges-ardeche.jpg" alt="" class="popx" />
             <h3>Gorges de l'Ardèche</h3>
             <p>30 km de canyon creusés dans le plateau calcaire.
               (<a href="https://www.flickr.com/photos/joe_leads/13043293793">Johannes Lietz, juillet 2013</a>)
             </p>
           </div>
           <div class="column half">
-            <a href="images/fulls/grotte-chauvet.jpg"><img src="images/thumbs/grotte-chauvet.jpg" alt="" /></a>
+            <img src="images/thumbs/grotte-chauvet.jpg" alt="" class="popx" />
             <h3>Grotte Chauvet</h3>
             <p>La plus ancienne et la plus belle grotte ornée.
               (<a href="https://fr-fr.facebook.com/InventeursGrotteChauvet">Inventeurs, décembre 1983</a>)
             </p>
           </div>
           <div class="column half">
-            <a href="images/fulls/mont-gerbier-jonc.jpg"><img src="images/thumbs/mont-gerbier-jonc.jpg" alt="" /></a>
+            <img src="images/thumbs/mont-gerbier-jonc.jpg" alt="" class="popx" />
             <h3>Mont Gerbier de Jonc</h3>
             <p>Le 2° site naturel le plus visité de l'Ardèche.
               (<a href="https://www.flickr.com/photos/cpakmoi/8664182413">CpaKmoi, août 2012</a>)
@@ -172,6 +172,46 @@
     <div class="copyright">
       <p>&copy; <a href="http://guide-en-ardeche.com">guide-en-ardeche.com</a></p>
     </div>
+
+<script>
+
+function hidePopix(e) {
+  e.preventDefault();
+  popx_modal.style.display = "none";
+  popx_overlay.style.display = "none";
+}
+
+function showPopix(e) {
+  e.preventDefault();
+  popx_image.setAttribute("src", this.getAttribute("src").replace("thumbs", "fulls"));
+  popx_label.innerText = this.nextSibling.nextSibling.innerText;
+  popx_overlay.style.display = "block";
+  popx_modal.style.display = "inline";
+}
+
+// Teste s'il est possible d'agrandir les photos
+var aide = document.getElementsByClassName("aide")[0];
+var disp = window.getComputedStyle(aide, null).getPropertyValue("display");
+if (disp === "block") {
+  // Ajout de containers vide pour la lightbox
+  document.body.innerHTML += "<div id='popx_overlay'></div><div id='popx_modal'><img src='' alt='' /><p></p></div>";
+
+  // Retrouve une référence sur ces nouveaux containers
+  var popx_overlay = document.getElementById("popx_overlay");
+  var popx_modal = document.getElementById("popx_modal");
+  var popx_image = popx_modal.getElementsByTagName("img")[0];
+  var popx_label = popx_modal.getElementsByTagName("p")[0];
+
+  // Ajout d'évènements pour cacher la lightbox
+  popx_overlay.onclick = hidePopix;
+  popx_modal.onclick = hidePopix;
+
+  // Ajout d'une lightbox pour agrandir les photos
+  var popx = document.getElementById("photos").getElementsByClassName("popx");
+  for (var i = 0; i < popx.length; i++) { popx[i].onclick = showPopix; }
+}
+
+</script>
 
   </body>
 </html>

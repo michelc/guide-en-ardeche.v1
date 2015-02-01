@@ -201,7 +201,6 @@ section b {
 }
 
 
-
 /*
  * Photo gallery
  *
@@ -216,6 +215,56 @@ section b {
 #photos p {
   padding: 0;
 }
+
+.aide { display: none; }
+@media (min-width: 48em) {
+  #photos img {
+    cursor: pointer;
+  }
+  .aide {
+    display: block;
+    font-style: italic;
+  }
+}
+
+
+/*
+ * Popix
+ *
+ */
+#popx_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popx_modal {
+  display: none;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  border: white 7px solid;
+  transform: translate(-50%, -55%);
+  background-color: white;
+  border-radius: 7px;
+  text-align: center;
+  z-index: 11; /* 1 higher than the overlay layer */
+}
+
+#popx_modal p {
+  margin: 0;
+  padding: 0;
+}
+
 
 
 /*
