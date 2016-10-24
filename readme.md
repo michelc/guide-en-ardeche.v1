@@ -18,3 +18,8 @@ Sources pour le site internet de [Nicole](http://guide-en-ardeche.com/).
 * Grotte Chauvet : https://fr-fr.facebook.com/InventeursGrotteChauvet
 * Gerbier de Jonc : https://www.flickr.com/photos/cpakmoi/8664182413
 * Antraïgues : https://www.flickr.com/photos/fz/5943716826
+
+## Validation
+
+* Supprimer .clearfix, .row { *zoom: 1; } qui n'est là que pour IE 6/7
+* Manque une favicon.ico
